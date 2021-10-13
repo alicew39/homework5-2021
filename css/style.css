@@ -64,7 +64,7 @@ nav a{
 }
 
 /* Requirement 2 code here*/
-a:hover {
+nav a:hover {
   text-decoration: underline;
 }
  
@@ -80,7 +80,7 @@ a:hover {
 
   /* Requirement 3a code here*/
   position: absolute;
-  top: -50px;
+  top: -40px;
 }
 
 .skip a:focus {
@@ -97,7 +97,7 @@ a:hover {
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-auto-rows: auto auto auto auto; 
+  grid-auto-rows: auto auto auto auto auto; 
   grid-row-gap: 15px;
 }
 
@@ -112,38 +112,60 @@ header{
   
   /* YOUR CODE HERE; */
   background-repeat: no-repeat;
-  column-span: all;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
   background-image: url("../images/header.jpg");
 }
 
-.about, .method, .client, .contacts{
-  grid-column: 2 / span 2;
+
+.about {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
-.about-image, .method-image, .client-image, .contact-image{
-  grid-column: 1 / span 4;
+.about-image {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+} 
+
+.method-image {
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 1;
   max-height: 700px;
   overflow: hidden;
 }
 
-.about, .about-image{
-  grid-row: 1 / 2;
-}
-
-.method, .method-image{
-  grid-row: 2 / 3;
-}
-
-.client, .client-image{
+.method {
+  grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
 
-.contacts, .contact-image{
+.clients-image {
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.clients {
+  grid-column: 2 / 3;
   grid-row: 4 / 5;
 }
+
+.contact-image {
+  grid-column: 1 / span 3;
+  grid-row: 5 / span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.contact {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+}
+
 
 
 /* You need to write some of your own selectors here */
@@ -161,7 +183,6 @@ header{
 @media screen and (min-width: 800px){
   nav{
     padding: 30px 0;
-    /* Your code here */
     align-self: center;
     text-align: right;
   }
@@ -172,13 +193,13 @@ header{
     grid-template-rows: 400px, 400px, 400px, 400px, 400px;
   }
 
-  .about, .client, .method-image, .contact-image{
+  /*.about, .client, .method-image, .contact-image{
     grid-column: 3 / span 2;
   }
 
   .about-image, .client-image, .method, .contacts{
     grid-column: 2 / span 2;
-  }
+  }*/
 }
 
 
