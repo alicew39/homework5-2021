@@ -124,15 +124,15 @@ header{
 }
 
 .about-image {
-  grid-column: 1 / span 3;
-  grid-row: 2 / span 1;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
   max-height: 700px;
   overflow: hidden;
 } 
 
 .method-image {
-  grid-column: 1 / span 3;
-  grid-row: 3 / span 1;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
   max-height: 700px;
   overflow: hidden;
 }
@@ -143,8 +143,8 @@ header{
 }
 
 .clients-image {
-  grid-column: 1 / span 3;
-  grid-row: 4 / span 1;
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
   max-height: 700px;
   overflow: hidden;
 }
@@ -155,8 +155,8 @@ header{
 }
 
 .contact-image {
-  grid-column: 1 / span 3;
-  grid-row: 5 / span 1;
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
   max-height: 700px;
   overflow: hidden;
 }
@@ -168,7 +168,7 @@ header{
 
 
 
-/* You need to write some of your own selectors here :)*/
+/* You need to write some of your own selectors here */
 
 
 .text-block{
